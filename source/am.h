@@ -13,6 +13,9 @@
  *
  * Copyright 2014 - 2016 ForgeRock AS.
  */
+/**
+ * Portions Copyrighted 2022 OGIS-RI Co., Ltd.
+ */
 
 #ifndef AM_H
 #define AM_H
@@ -248,6 +251,7 @@ typedef struct am_request {
     struct url url; /* parsed/normalized request url (split in values) */
     char *normalized_url; /* normalized request url */
     char *overridden_url; /* normalized/overridden request url */
+    char *goto_url; /* URL based on overridden_url but using orig_url only for path information */
     char *normalized_url_pathinfo;
     char *overridden_url_pathinfo;
     const char *cookies;
